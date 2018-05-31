@@ -1,5 +1,14 @@
 {
   "npmScope": "hello-world",
   "projects": {
+    "first-app": {
+      "tags": []
+    },
+    "first-app-e2e": {
+      "tags": []
+    },
+    "first-lib": {
+      "tags": []
+    }
   }
 }

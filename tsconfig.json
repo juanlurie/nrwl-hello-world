@@ -18,6 +18,9 @@
     "paths": {
       "@hello-world/*": [
         "libs/*"
+      ],
+      "@hello-world/first-lib": [
+        "libs/first-lib/src/index.ts"
       ]
     }
   },
