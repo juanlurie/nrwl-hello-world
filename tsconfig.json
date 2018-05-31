@@ -16,11 +16,14 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@hello-world/*": [
+      "@canister/*": [
         "libs/*"
       ],
-      "@hello-world/components": [
-        "libs/components/src/index.ts"
+      "@canister/shared-components": [
+        "libs/shared-components/src/index.ts"
+      ],
+      "@canister/transact": [
+        "apps/transact/src/index.ts"
       ]
     }
   },

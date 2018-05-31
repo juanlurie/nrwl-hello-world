@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "canister",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -26,11 +26,11 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/common": "6.0.1",
+    "@angular/core": "6.0.1",
+    "@angular/compiler": "6.0.1",
     "@angular/animations": "6.0.1",
     "@angular/cdk": "^6.2.0",
-    "@angular/common": "6.0.1",
-    "@angular/compiler": "6.0.1",
-    "@angular/core": "6.0.1",
     "@angular/flex-layout": "^5.0.0-beta.14",
     "@angular/forms": "6.0.1",
     "@angular/http": "^6.0.3",

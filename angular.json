@@ -3,27 +3,27 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
-    "first-app": {
-      "root": "apps/first-app/",
-      "sourceRoot": "apps/first-app/src",
+    "canister": {
+      "root": "apps/canister/",
+      "sourceRoot": "apps/canister/src",
       "projectType": "application",
-      "prefix": "hello-world",
+      "prefix": "canister",
       "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/first-app",
-            "index": "apps/first-app/src/index.html",
-            "main": "apps/first-app/src/main.ts",
-            "polyfills": "apps/first-app/src/polyfills.ts",
-            "tsConfig": "apps/first-app/tsconfig.app.json",
+            "outputPath": "dist/apps/canister",
+            "index": "apps/canister/src/index.html",
+            "main": "apps/canister/src/main.ts",
+            "polyfills": "apps/canister/src/polyfills.ts",
+            "tsConfig": "apps/canister/tsconfig.app.json",
             "assets": [
-              "apps/first-app/src/favicon.ico",
-              "apps/first-app/src/assets"
+              "apps/canister/src/favicon.ico",
+              "apps/canister/src/assets"
             ],
             "styles": [
-              "apps/first-app/src/styles.css"
+              "apps/canister/src/styles.css"
             ],
             "scripts": []
           },
@@ -31,8 +31,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/first-app/src/environments/environment.ts",
-                  "with": "apps/first-app/src/environments/environment.prod.ts"
+                  "replace": "apps/canister/src/environments/environment.ts",
+                  "with": "apps/canister/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -50,34 +50,34 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "first-app:build"
+            "browserTarget": "canister:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "first-app:build:production"
+              "browserTarget": "canister:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "first-app:build"
+            "browserTarget": "canister:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "apps/first-app/src/test.ts",
-            "polyfills": "apps/first-app/src/polyfills.ts",
-            "tsConfig": "apps/first-app/tsconfig.spec.json",
-            "karmaConfig": "apps/first-app/karma.conf.js",
+            "main": "apps/canister/src/test.ts",
+            "polyfills": "apps/canister/src/polyfills.ts",
+            "tsConfig": "apps/canister/tsconfig.spec.json",
+            "karmaConfig": "apps/canister/karma.conf.js",
             "styles": [
-              "apps/first-app/src/styles.css"
+              "apps/canister/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "apps/first-app/src/favicon.ico",
-              "apps/first-app/src/assets"
+              "apps/canister/src/favicon.ico",
+              "apps/canister/src/assets"
             ]
           }
         },
@@ -85,8 +85,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/first-app/tsconfig.app.json",
-              "apps/first-app/tsconfig.spec.json"
+              "apps/canister/tsconfig.app.json",
+              "apps/canister/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -95,21 +95,21 @@
         }
       }
     },
-    "first-app-e2e": {
-      "root": "apps/first-app-e2e/",
+    "canister-e2e": {
+      "root": "apps/canister-e2e/",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "apps/first-app-e2e/protractor.conf.js",
-            "devServerTarget": "first-app:serve"
+            "protractorConfig": "apps/canister-e2e/protractor.conf.js",
+            "devServerTarget": "canister:serve"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "apps/first-app-e2e/tsconfig.e2e.json",
+            "tsConfig": "apps/canister-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
@@ -117,26 +117,54 @@
         }
       }
     },
-    "components": {
-      "root": "libs/components",
-      "sourceRoot": "libs/components/src",
+    "shared-components": {
+      "root": "libs/shared-components",
+      "sourceRoot": "libs/shared-components/src",
       "projectType": "library",
-      "prefix": "hello-world",
+      "prefix": "canister",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/components/src/test.ts",
-            "tsConfig": "libs/components/tsconfig.spec.json",
-            "karmaConfig": "libs/components/karma.conf.js"
+            "main": "libs/shared-components/src/test.ts",
+            "tsConfig": "libs/shared-components/tsconfig.spec.json",
+            "karmaConfig": "libs/shared-components/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/components/tsconfig.lib.json",
-              "libs/components/tsconfig.spec.json"
+              "libs/shared-components/tsconfig.lib.json",
+              "libs/shared-components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "transact": {
+      "root": "apps/transact",
+      "sourceRoot": "apps/transact/src",
+      "projectType": "library",
+      "prefix": "apps/transact",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/transact/src/test.ts",
+            "tsConfig": "apps/transact/tsconfig.spec.json",
+            "karmaConfig": "apps/transact/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/transact/tsconfig.lib.json",
+              "apps/transact/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -153,5 +181,5 @@
     },
     "defaultCollection": "@nrwl/schematics"
   },
-  "defaultProject": "first-app"
+  "defaultProject": "canister"
 }

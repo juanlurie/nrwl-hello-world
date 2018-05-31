@@ -1,13 +1,16 @@
 {
-  "npmScope": "hello-world",
+  "npmScope": "canister",
   "projects": {
-    "first-app": {
+    "canister": {
       "tags": []
     },
-    "first-app-e2e": {
+    "canister-e2e": {
       "tags": []
     },
-    "components": {
+    "shared-components": {
+      "tags": []
+    },
+    "transact": {
       "tags": []
     }
   }
