@@ -23,7 +23,10 @@
         "libs/shared-components/src/index.ts"
       ],
       "@canister/transact": [
-        "apps/transact/src/index.ts"
+        "libs/transact/src/index.ts"
+      ],
+      "@canister/platform": [
+        "libs/platform/src/index.ts"
       ]
     }
   },

@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/apps/transact",
+    "outDir": "../../dist/out-tsc/libs/transact",
     "types": [
       "jasmine",
       "node"

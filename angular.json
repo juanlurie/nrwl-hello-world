@@ -146,25 +146,53 @@
       }
     },
     "transact": {
-      "root": "apps/transact",
-      "sourceRoot": "apps/transact/src",
+      "root": "libs/transact",
+      "sourceRoot": "libs/transact/src",
       "projectType": "library",
-      "prefix": "apps/transact",
+      "prefix": "libs/transact",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "apps/transact/src/test.ts",
-            "tsConfig": "apps/transact/tsconfig.spec.json",
-            "karmaConfig": "apps/transact/karma.conf.js"
+            "main": "libs/transact/src/test.ts",
+            "tsConfig": "libs/transact/tsconfig.spec.json",
+            "karmaConfig": "libs/transact/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/transact/tsconfig.lib.json",
-              "apps/transact/tsconfig.spec.json"
+              "libs/transact/tsconfig.lib.json",
+              "libs/transact/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "platform": {
+      "root": "libs/platform",
+      "sourceRoot": "libs/platform/src",
+      "projectType": "library",
+      "prefix": "libs/platform",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/platform/src/test.ts",
+            "tsConfig": "libs/platform/tsconfig.spec.json",
+            "karmaConfig": "libs/platform/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/platform/tsconfig.lib.json",
+              "libs/platform/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

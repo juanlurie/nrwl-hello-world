@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SharedComponentsModule } from '@canister/shared-components';
 import { TransactModule } from '@canister/transact';
+import { PlatformModule } from '@canister/platform';
 
 import { EasyModule, EasyFormService, EasyFabService } from 'ngx-suite';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,7 +19,7 @@ import {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NxModule.forRoot(), EasyModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, MatInputModule, SharedComponentsModule, TransactModule],
+  imports: [BrowserModule, NxModule.forRoot(), EasyModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, MatInputModule, SharedComponentsModule, TransactModule, PlatformModule],
   providers: [EasyFabService],
   bootstrap: [AppComponent]
 })

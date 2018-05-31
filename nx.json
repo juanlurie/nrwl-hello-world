@@ -12,6 +12,9 @@
     },
     "transact": {
       "tags": []
+    },
+    "platform": {
+      "tags": []
     }
   }
 }
