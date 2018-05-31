@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit, OnChanges } from '@angu
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-    selector: 'hello-world-easy-input',
+    selector: 'components-easy-input',
     template: `<mat-form-field class='easy-input'>
                         <input matInput>
                </mat-form-field>`,

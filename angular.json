@@ -117,26 +117,26 @@
         }
       }
     },
-    "first-lib": {
-      "root": "libs/first-lib",
-      "sourceRoot": "libs/first-lib/src",
+    "components": {
+      "root": "libs/components",
+      "sourceRoot": "libs/components/src",
       "projectType": "library",
       "prefix": "hello-world",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/first-lib/src/test.ts",
-            "tsConfig": "libs/first-lib/tsconfig.spec.json",
-            "karmaConfig": "libs/first-lib/karma.conf.js"
+            "main": "libs/components/src/test.ts",
+            "tsConfig": "libs/components/tsconfig.spec.json",
+            "karmaConfig": "libs/components/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/first-lib/tsconfig.lib.json",
-              "libs/first-lib/tsconfig.spec.json"
+              "libs/components/tsconfig.lib.json",
+              "libs/components/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

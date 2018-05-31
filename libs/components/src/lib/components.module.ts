@@ -12,4 +12,4 @@ import {
   declarations: [InputComponent],
   exports: [InputComponent]
 })
-export class FirstLibModule { }
+export class ComponentsModule { }

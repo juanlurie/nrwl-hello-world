@@ -7,7 +7,7 @@
     "first-app-e2e": {
       "tags": []
     },
-    "first-lib": {
+    "components": {
       "tags": []
     }
   }
